@@ -1,0 +1,33 @@
+create database volotontarizzatore;
+use volotontarizzatore;
+
+create table volontario
+(
+    id              int primary key auto_increment,
+    nome            varchar(50),
+    cognome         varchar(50),
+    numero_presenze int DEFAULT 0,#clausole NOT NULL - DEFAULT
+    invisibilita    int default 3
+);
+
+INSERT INTO volontario (nome, cognome, invisibilita)
+VALUES ('Marco', 'Rossi', 1),
+       ('Giulia', 'Bianchi', 3),
+       ('Alessandro', 'Ferrari', 2),
+       ('Francesca', 'Esposito', 1),
+       ('Lorenzo', 'Romano', 3),
+       ('Chiara', 'Ricci', 2),
+       ('Mattia', 'Marino', 1),
+       ('Sofia', 'Greco', 2),
+       ('Gabriele', 'Bruno', 3),
+       ('Elena', 'Gallo', 1),
+       ('Riccardo', 'Conti', 2),
+       ('Martina', 'De Luca', 3),
+       ('Andrea', 'Costa', 1),
+       ('Sara', 'Giordano', 2),
+       ('Tommaso', 'Mancini', 3),
+       ('Alice', 'Rizzo', 1),
+       ('Federico', 'Lombardi', 2),
+       ('Beatrice', 'Moretti', 3),
+       ('Leonardo', 'Barbieri', 1),
+       ('Valentina', 'Fontana', 2);
