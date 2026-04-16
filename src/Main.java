@@ -38,11 +38,30 @@ public class Main
                                                         """)
                                                 );
 
+        //come fare scelta casuale con valori pesati
+        //1) somma di tutti i valori per definire lunghezza segmento
+        int somma = 0;
+        for(Volontario v : possibili)
+            somma+=v.getInvisibilita();
+
+        double randomico = Math.random()*somma;
+
+        int totaleFinoAdOra = 0;
+
+//        Martina,De Luca,0,3
+        Volontario scelto=null;
+
         for(Volontario v:possibili)
         {
-            System.out.println(v);
+            totaleFinoAdOra+=v.getInvisibilita();
+            if(randomico<=totaleFinoAdOra) {
+                scelto = v;
+                break;
+            }
         }
 
+        System.out.println("Il/la volontario/a scelto/a è "+scelto.getNome()+" "+scelto.getCognome());
+        db.executeDml("update volontario set numero_presenze=numero_presenze+1 where id= "+scelto.getId());
     }
 
     private static void reset()
