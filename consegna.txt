@@ -1,0 +1,15 @@
+nel main aggiungere
+CASE 2
+Sceglie un volontario solo tra quelli con valore invisibilità
+scelto da utente (chiedere a utente un numero tra 1 e 3), fare
+scegliere solo uno di quelli (WHERE nella query)
+
+CASE 3
+CATTIVERIA MIRATA
+FAR inserire a utente delle lettere, far scegliere un volontario
+tralasciando il numero di presenze o invisibilità, basta che abbia
+quelle lettere nel nome O nel cognome (LIKE OR)
+
+
+CODICE SCELTA RANDOMICA IN LISTA
+lista.get((int)(Math.random()*lista.size()))
