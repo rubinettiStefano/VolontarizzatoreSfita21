@@ -1,5 +1,5 @@
-create database volotontarizzatore;
-use volotontarizzatore;
+create database volontarizzatore;
+use volontarizzatore;
 
 create table volontario
 (
